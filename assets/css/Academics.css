@@ -1,0 +1,29 @@
+
+.paper-item {
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paper-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.paper-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.paper-content ul li {
+  margin-bottom: 10px;
+}
+
+.paper-content ul li a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s ease;
+}
+
+.paper-content ul li a:hover {
+  color: #0056b3;
+}
