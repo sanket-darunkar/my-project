@@ -89,7 +89,9 @@
   position: relative;
   overflow: hidden;
   
-}
+} 
+/* done changes */
+
 
 /* for home to addmission in center algin */
 .header .container-fluid {
@@ -1227,7 +1229,7 @@ section,
 --------------------------------------------------------------*/
 
 /* redirect btn  */
-./* Styling for the Question Papers Section */
+/* Styling for the Question Papers Section */
 #question-papers {
   padding: 50px 0;
   background: #f9f9f9;
@@ -2069,4 +2071,31 @@ section,
 
 .subject-list a:hover {
   color: #007bff; /* Optional: Changes color on hover */
+}
+
+/* nptl course button at home page */
+.green-button {
+  background-color: #28a745; /* Green color */
+  color: #fff; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.green-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
+  transform: translateY(-2px);
+}
+
+.green-button:active {
+  background-color: #1e7e34;
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
 }
