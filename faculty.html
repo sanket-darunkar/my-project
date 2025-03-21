@@ -27,6 +27,75 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    .faculty-card {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .faculty-card:hover {
+        transform: scale(1.05);
+    }
+
+    .faculty-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+    height: 100%; /* Ensure all cards have the same height */
+}
+
+.faculty-card:hover {
+    transform: scale(1.05);
+}
+
+.faculty-card img {
+    width: 120px;  /* Ensure all images have the same width */
+    height: 120px; /* Fix height to avoid uneven cards */
+    object-fit: cover; /* Ensures image maintains aspect ratio */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.faculty-card h5 {
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 50px; /* Ensures name alignment */
+}
+
+.faculty-card p {
+    font-size: 14px;
+    min-height: 40px; /* Aligns text properly */
+}
+
+.faculty-card button {
+    margin-top: auto; /* Push button to the bottom for uniform height */
+}
+h1, h5, h4 {
+        text-decoration: none;
+    }
+
+    /* Remove blue underline from navigation links */
+    .navmenu ul li a {
+        text-decoration: none !important;
+    }
+
+    /* Remove blue underline from footer links */
+    .footer-links ul li a, .footer-newsletter a {
+        text-decoration: none !important;
+    }
+
+    /* Ensure links remain clickable but without underlines */
+    a {
+        text-decoration: none !important;
+    }
+
+</style>
 
 <body class="trainers-page">
 
@@ -83,83 +152,169 @@
     </div>
     <!-- End Page Title -->
 
+
+
     <!-- Trainers Section -->
-    <section id="faculty" class="section faculty-section">
-      <div class="container">
-        <div class="row gy-5">
-          
-          <!-- Faculty Member 1 -->
-          <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/1.jpeg" class="img-fluid" alt="Faculty Member">
-            <div class="member-content text-center">
-              <h4>Mrs. Saroj Shambharkar</h4>
-              <span>Assistant Professor and Head</span>
-              <p>Expert in AI, Machine Learning, and Cloud Computing.</p>
-              <a href="faculty-profile.html" class="view-profile">View Profile</a>
-            </div>
+   <!-- Faculty Section -->
+   <div class="container mt-5">
+    <div class="row">
+
+        <!-- Faculty Member 1 -->
+        <div class="col-md-3">
+          <div class="faculty-card d-flex flex-column">
+              <img src="assets/img/1.jpeg" alt="Faculty 1">
+              <h5>Mrs. Saroj Shambharkar</h5>
+              <p>Assistant Professor and Head</p>
+              <button class="btn btn-primary mt-auto" onclick="openModal(1)">View Profile</button>
           </div>
-    
-          <!-- Faculty Member 2 -->
-          <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/2.jpeg" class="img-fluid" alt="Faculty Member">
-            <div class="member-content text-center">
-              <h4>Ms. Ankita Nathe</h4>
-              <span>Assistant Professor</span>
-              <p>Specialist in Algebra, Calculus, and Data Analysis.</p>
-              <a href="faculty-profile.html" class="view-profile">View Profile</a>
-            </div>
-          </div>
-    
-          <!-- Faculty Member 3 -->
-          <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
-            <img src="assets/img/3.jpeg" class="img-fluid" alt="Faculty Member">
-            <div class="member-content text-center">
-              <h4>Mr. Sachin Y. Meshram</h4>
-              <span>Assistant Professor</span>
-              <p>Researcher in Quantum Mechanics and Thermodynamics.</p>
-              <a href="faculty-profile.html" class="view-profile">View Profile</a>
-            </div>
-          </div>
-    
-          <!-- Faculty Member 4 -->
-          <div class="col-lg-3 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
-            <img src="assets/img/4.jpeg" class="img-fluid" alt="Faculty Member">
-            <div class="member-content text-center">
-              <h4>Mr.K. Nagaraju</h4>
-              <span>Assistant Professor</span>
-              <p>Specialist in Organic Chemistry and Biochemistry.</p>
-              <a href="faculty-profile.html" class="view-profile">View Profile</a>
-            </div>
-          </div>
-    
-        </div>
       </div>
-    </section>
-    
-    
+
+        <!-- Faculty Member 2 -->
+        <div class="col-md-3 text-center">
+            <div class="faculty-card p-3 border rounded" onclick="openModal(2)">
+                <img src="assets/img/2.jpeg" class="img-fluid rounded-circle" alt="Faculty 2">
+                <h5 class="mt-2">Ms. Ankita Nathe</h5>
+                <p>Assistant Professor</p>
+                <button class="btn btn-primary">View Profile</button>
+            </div>
+        </div>
+
+        <!-- Faculty Member 3 -->
+        <div class="col-md-3 text-center">
+            <div class="faculty-card p-3 border rounded" onclick="openModal(3)">
+                <img src="assets/img/3.jpeg" class="img-fluid rounded-circle" alt="Faculty 3">
+                <h5 class="mt-2">Mr. Sachin Y. Meshram</h5>
+                <p>Assistant Professor</p>
+                <button class="btn btn-primary">View Profile</button>
+            </div>
+        </div>
+
+        <!-- Faculty Member 4 -->
+        <div class="col-md-3 text-center">
+            <div class="faculty-card p-3 border rounded" onclick="openModal(4)">
+                <img src="assets/img/4.jpeg" class="img-fluid rounded-circle" alt="Faculty 4">
+                <h5 class="mt-2">Mr.K. Nagaraju</h5>
+                <p>Assistant Professor</p>
+                <button class="btn btn-primary">View Profile</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="facultyModal" tabindex="-1" aria-labelledby="facultyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="facultyModalLabel">Faculty Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img id="facultyImage" src="" class="img-fluid rounded" alt="Faculty Image">
+                    </div>
+                    <div class="col-md-8">
+                        <h4 id="facultyName"></h4>
+                        <p><strong>Position:</strong> <span id="facultyPosition"></span></p>
+                        <p><strong>Qualification:</strong> <span id="facultyQualification"></span></p>
+                        <p><strong>Experience:</strong> <span id="facultyExperience"></span></p>
+                        <p><strong>Publications:</strong> <span id="facultyPublications"></span></p>
+                        <p><strong>Membership:</strong> <span id="facultyMembership"></span></p>
+                        <p><strong>Fields of Interest:</strong> <span id="facultyFields"></span></p>
+                        <p><strong>Other:</strong> <span id="facultyOther"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const facultyData = {
+        1: {
+            name: "Mrs. Saroj Shambharkar",
+            position: "Assistant Professor and Head",
+            image: "assets/img/1.jpeg",
+            qualification: "B.E.(Computer Technology) from RTM Nagpur University, M. Tech.(Computer Science and Engineering) from VNIT, Nagpur",
+            experience: "23 years of experience in teaching",
+            publications: "15 papers in National and International Conferences, 1 patent published, 1 Patent granted",
+            membership: "Life Member of ISTE, India",
+            fields: "Artificial Intelligence, Machine Learning, Deep Learning, Natural Language Processing, Pattern Recognition",
+            other: "Attended several STTPs, workshops, Seminars, FDP, NPTEL Courses"
+        },
+        2: {
+            name: "Ms. Ankita Nathe",
+            position: "Assistant Professor",
+            image: "assets/img/2.jpeg",
+            qualification: "B.E. in Computer Science and Engineering from S.G.B. Amravati University, M.E. from S.G.B.Amravati University",
+            experience: "3 years of total teaching experience",
+            publications: "Published 6 papers in International Journal",
+            membership: "None",
+            fields: "Artificial Intelligence, Programming Languages",
+            other: "Attended several workshops and training programs"
+        },
+        3: {
+            name: "Mr. Sachin Y. Meshram",
+            position: "Assistant Professor",
+            image: "assets/img/3.jpeg",
+            qualification: "B.E. (Computer Science and Engineering) from NMU, M.Tech from RGPV University",
+            experience: "8 years of teaching experience",
+            publications: "Published 6 research papers in International Journals",
+            membership: "None",
+            fields: "Operating System, Computer Networks, Data Structures, Advanced Computer Networks, Data Science, Mobile Computing",
+            other: "Attended several FDPs, STTPs, and Workshops"
+        },
+        4: {
+            name: "Mr.K. Nagaraju",
+            position: "Assistant Professor",
+            image: "assets/img/4.jpeg",
+            qualification: "B.Tech, M.Tech in Computer Science from JNTU Hyderabad, Pursuing PhD",
+            experience: "16 years of teaching experience",
+            publications: "Published 9 papers in International Journals, 2 Patents Filed",
+            membership: "IAENG",
+            fields: "Artificial Intelligence, Machine Learning, Deep Learning, Cyber Security",
+            other: "Attended many Workshops, NPTEL Courses"
+        }
+    };
+
+    function openModal(id) {
+        document.getElementById("facultyImage").src = facultyData[id].image;
+        document.getElementById("facultyName").innerText = facultyData[id].name;
+        document.getElementById("facultyPosition").innerText = facultyData[id].position;
+        document.getElementById("facultyQualification").innerText = facultyData[id].qualification;
+        document.getElementById("facultyExperience").innerText = facultyData[id].experience;
+        document.getElementById("facultyPublications").innerText = facultyData[id].publications;
+        document.getElementById("facultyMembership").innerText = facultyData[id].membership;
+        document.getElementById("facultyFields").innerText = facultyData[id].fields;
+        document.getElementById("facultyOther").innerText = facultyData[id].other;
+        
+        new bootstrap.Modal(document.getElementById('facultyModal')).show();
+    }
+</script>
     <!-- /Trainers Section -->
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+ <footer id="footer" class="footer position-relative light-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Mentor</span>
+            <span class="">Kavikulguru Institute of Technology and Science</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Ramtek, Nagpur, Maharashtra</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 1234 567 890</span></p>
+            <p><strong>Email:</strong> <span>info@kits.edu</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/kitsramtek"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://facebook.com/kitsramtek"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/kitsramtek"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/school/kitsramtek"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -168,28 +323,28 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Engineering Courses</a></li>
+            <li><a href="#">Research & Innovation</a></li>
+            <li><a href="#">Placement Services</a></li>
+            <li><a href="#">Industry Partnerships</a></li>
+            <li><a href="#">Events & Workshops</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <p>Subscribe to our newsletter and stay updated on the latest news, events, and offers from KITS!</p>
           <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="newsletter-form"><input type="email" name="email" required><input type="submit" value="Subscribe"></div>
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your subscription request has been sent. Thank you!</div>
@@ -200,17 +355,13 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mentor</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 ">Kavikulguru Institute of Technology and Science</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
+        Designed by <a href="https://kits.edu/">KITS Ramtek</a>
       </div>
     </div>
 
-  </footer>
+</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
