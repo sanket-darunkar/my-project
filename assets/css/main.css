@@ -2211,3 +2211,11 @@ section,
   background-color: #1e7e34; /* Even darker green on click */
   transform: scale(1);
 }
+/* forum image logo */
+.card-img img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+
