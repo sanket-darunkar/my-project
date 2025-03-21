@@ -1449,6 +1449,31 @@ section,
 .view-profile:hover {
   background-color: #0056b3;
 }
+/* Default size (Desktop) */
+#modalFacultyImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  #modalFacultyImage {
+      width: 120px;
+      height: 120px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  #modalFacultyImage {
+      width: 100px;
+      height: 100px;
+  }
+}
 
 
 /*--------------------------------------------------------------
