@@ -29,6 +29,44 @@
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom Modal CSS -->
+<style>
+  .custom-modal-width {
+      max-width: 90%; /* Increases modal width */
+  }
+
+  .modal-body table th {
+      width: 30%;
+      font-weight: 600;
+  }
+
+  .modal-body table td {
+      width: 70%;
+  }
+
+  .modal-content {
+      border-radius: 10px;
+  }
+
+  .modal-header {
+      background: #f8f9fa;
+      border-bottom: 1px solid #dee2e6;
+  }
+
+  .modal-header .modal-title {
+      font-weight: 700;
+  }
+</style>
+<style>
+  /* Ensure all faculty images have the same size */
+  #facultyImage {
+      width: 350px;  /* Adjust width as needed */
+      height: 350px; /* Adjust height as needed */
+      object-fit: cover; /* Ensures image fills the frame properly */
+      border-radius: 50%; /* Makes it circular */
+      border: 2px solid #ddd; /* Optional border for better appearance */
+  }
+</style>
 <style>
   
     .faculty-card {
@@ -204,33 +242,60 @@ h1, h5, h4 {
 </div>
 
 <!-- MODAL -->
+<!-- MODAL -->
 <div class="modal fade" id="facultyModal" tabindex="-1" aria-labelledby="facultyModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="facultyModalLabel">Faculty Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img id="facultyImage" src="" class="img-fluid rounded" alt="Faculty Image">
-                    </div>
-                    <div class="col-md-8">
-                        <h4 id="facultyName"></h4>
-                        <p><strong>Position:</strong> <span id="facultyPosition"></span></p>
-                        <p><strong>Qualification:</strong> <span id="facultyQualification"></span></p>
-                        <p><strong>Experience:</strong> <span id="facultyExperience"></span></p>
-                        <p><strong>Publications:</strong> <span id="facultyPublications"></span></p>
-                        <p><strong>Membership:</strong> <span id="facultyMembership"></span></p>
-                        <p><strong>Fields of Interest:</strong> <span id="facultyFields"></span></p>
-                        <p><strong>Other:</strong> <span id="facultyOther"></span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="modal-dialog modal-xl"> <!-- Changed modal-lg to modal-xl for extra width -->
+      <div class="modal-content custom-modal-width"> <!-- Added custom class for extra control -->
+          <div class="modal-header">
+              <h5 class="modal-title" id="facultyModalLabel">Faculty Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-4 text-center">
+                      <img id="facultyImage" src="" class="img-fluid rounded-circle border p-2" alt="Faculty Image">
+                  </div>
+                  <div class="col-md-8">
+                      <h4 id="facultyName" class="fw-bold"></h4>
+                      <table class="table table-borderless">
+                          <tr>
+                              <th class="text-end">Position:</th>
+                              <td id="facultyPosition"></td>
+                          </tr>
+                          <tr>
+                              <th class="text-end">Qualification:</th>
+                              <td id="facultyQualification"></td>
+                          </tr>
+                          <tr>
+                              <th class="text-end">Experience:</th>
+                              <td id="facultyExperience"></td>
+                          </tr>
+                          <tr>
+                              <th class="text-end">Publications:</th>
+                              <td id="facultyPublications"></td>
+                          </tr>
+                          <tr>
+                              <th class="text-end">Membership:</th>
+                              <td id="facultyMembership"></td>
+                          </tr>
+                          <tr>
+                              <th class="text-end">Fields of Interest:</th>
+                              <td id="facultyFields"></td>
+                          </tr>
+                          <tr>
+                              <th class="text-end">Other:</th>
+                              <td id="facultyOther"></td>
+                          </tr>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
+
+
+
 
 <script>
     const facultyData = {
