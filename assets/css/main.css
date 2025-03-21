@@ -2185,3 +2185,29 @@ section,
   transform: translateY(1px);
   box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
 }
+
+/* contact us btn */
+.Contact-us-btn {
+  background-color: #28a745; /* Green color */
+  color: white; /* White text */
+  font-size: 16px; /* Adjust text size */
+  padding: 20px 34px; /* Add padding */
+  margin-left: 45%;
+  margin-top: 10%;
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Contact-us-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.Contact-us-btn:active {
+  background-color: #1e7e34; /* Even darker green on click */
+  transform: scale(1);
+}
