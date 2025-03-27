@@ -74,6 +74,53 @@
      
 
     </div>
+    <style>
+      /* Default styles for Desktop (already provided in the image) */
+
+/* Tablet View (Width: 768px and below) */
+@media screen and (max-width: 768px) {
+    .mainbanner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bannerimg, .bannerimgheads {
+        width: 150px;
+        height: auto;
+    }
+
+    .bannerheadingcontainer h1 {
+        font-size: 24px;
+    }
+
+    .bannerheadingcontainer p {
+        font-size: 14px;
+    }
+}
+
+/* Mobile View (Width: 480px and below) */
+@media screen and (max-width: 480px) {
+    .mainbanner {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .bannerimg, .bannerimgheads {
+        width: 120px;
+        height: auto;
+    }
+
+    .bannerheadingcontainer h1 {
+        font-size: 20px;
+    }
+
+    .bannerheadingcontainer p {
+        font-size: 12px;
+    }
+}
+
+    </style>
   </header>
 
   <main class="main">
