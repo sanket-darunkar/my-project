@@ -56,12 +56,15 @@ To run this project locally:
 This can be done by double-clicking the index.html file or opening it directly from your browser.
 
 **Contributing**
+
 Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 **License**
+
 This project is licensed under the MIT License.
 
 **Contact**
+
 For any inquiries or further information, please contact:
 
 Name: Sanket Darunkar
